@@ -10,14 +10,21 @@ module.exports = {
     ],
   },
   networks: {
-    // arb: {
-    //   url: `https://arbitrum.llamarpc.com`,
-    //   accounts: [''],
-    // },
+    arb: {
+      url: `https://1rpc.io/arb`,
+      accounts: [''],
+    },
     // pol: {
     //   url: `https://polygon.llamarpc.com`,
     //   accounts: [''],
     // },
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: {
+      arbitrumOne:""
+    }
   },
   
 };
