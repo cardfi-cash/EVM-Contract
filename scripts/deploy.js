@@ -26,6 +26,14 @@ async function main() {
       process.exit(1);
     });
 
-    //npx hardhat run scripts/depoly.js --network arb
+    //npx hardhat run scripts/deploy.js --network arb
 
-    //npx hardhat verify --network arb 0x4a22ad896f8e53dcecd243bd6733610022a6e450 ["0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9","0xaf88d065e77c8cc2239327c5edb3a432268e5831"] "0x69661b7a8A81b4F4d9cde379750277a802C20F5c" [10000000000000000,100000000]
+/**
+ * 
+ * 
+npx hardhat verify --network arb \
+--contract contracts/card.sol:CardFi \
+0x65571cb75214915A2cD43d9F883C96eDc4D5AB1a \
+--constructor-args args.js
+
+ */

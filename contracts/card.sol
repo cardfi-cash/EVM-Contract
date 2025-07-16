@@ -15,7 +15,7 @@ contract CardFi {
     }
     address public vault;
     //Events
-    event deposite(address from , uint256 amount , bytes to);
+    event deposite(address from , uint256 amount , address token , bytes to);
     event applyCard(address owner , bytes info , address token , uint256 amount);
 
     uint256 public applyFeeETH = 0;
@@ -28,6 +28,7 @@ contract CardFi {
         vault = _vault;
         applyFeeETH = applyFees[0];
         applyFeeUSD = applyFees[1];
+        owner = msg.sender;
     }
     function applyETH() external payable {
         require(msg.value >= applyFeeETH, "Must apply more than 0 ETH");
@@ -47,7 +48,7 @@ contract CardFi {
     function deposit(address token,uint256 amount , bytes memory to) public returns(uint256) {
         require(usd[token],"Token not support");
         IERC20(token).transferFrom(msg.sender, vault, amount);
-        emit deposite(msg.sender, amount, to);
+        emit deposite(msg.sender, amount,token, to);
         return 0;
     }
 

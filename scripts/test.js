@@ -5,7 +5,7 @@ async function main() {
   
     console.log("Testing account:", deployer.address);
   
-    let val = await ethers.getContractAt("CardFi","0x4a22ad896f8e53dcecd243bd6733610022a6e450");
+    let val = await ethers.getContractAt("CardFi","0x65571cb75214915A2cD43d9F883C96eDc4D5AB1a");
   
     const usdt = "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9";
     const usdc = "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
@@ -24,7 +24,7 @@ async function main() {
             console.log(
                 await val.usd(usdt),
                 await val.usd(usdc),
-                await val.usd("0x4a22ad896f8e53dcecd243bd6733610022a6e450"),
+                await val.usd("0x65571cb75214915A2cD43d9F883C96eDc4D5AB1a"),
             )
         }
         
